@@ -32,7 +32,7 @@ Upgrade existing GitHub Pages portfolio (https://jaisury.github.io/jayasurya_por
 - Timeline: *"Creator & Developer — SKU.Pro / Independent Product"* + user-provided description
 - About bio: repositioned SKU.Pro as *"latest personal product… AI-powered catalog assistant"*
 
-### Iter 3 — Production Polish (current)
+### Iter 3 — Production Polish
 - ✅ **Removed all Emergent branding** — deleted `#emergent-badge`, posthog snippet, and Emergent script from `index.html`
 - ✅ **Real SKU.Pro screenshots** — replaced mocked dashboard preview with a 3-shot gallery (Landing, Dashboard, History) using actual images; each with hover lift + zoom + label chip
 - ✅ **Copy aligned to real product** — SKU.Pro section now reads *"Write marketplace-optimized titles for Amazon, Shopify, Flipkart, Meesho + 6 more"*; features updated to Marketplace-optimized output / Quality score / Bulk upload / Searchable history
@@ -41,6 +41,18 @@ Upgrade existing GitHub Pages portfolio (https://jaisury.github.io/jayasurya_por
 - ✅ **Performance** — All images have `loading="lazy"` and `decoding="async"`; hero image uses `loading="eager"`
 - ✅ **Responsiveness** — Verified 1920×800 (desktop), 768×900 (tablet), 390×844 (mobile). Added mobile-specific breakpoints (`≤480px`)
 - ✅ **QA** — No console errors, no overflow, all CTAs functional, no dark-on-dark issues
+
+### Iter 4 — Code Review Fixes (current)
+- ✅ **Refactored monolithic App.js** (997 → 45 lines) into modular components under `src/components/`
+- ✅ **Extracted data + type definitions** to `src/constants/portfolioData.js` with JSDoc typedefs for every data shape (StatItem, PortfolioItem, TimelineEntry, ContactLink, etc.)
+- ✅ **Custom hook** `useFadeInObserver` in `src/hooks/` — proper deps `[trigger, threshold]`, empty-list guard
+- ✅ **useCallback** on `goTo`, `goToContact`, `handleSubmit` to stabilize identity across renders
+- ✅ **Stable keys everywhere** — marquee now uses `${copyId}-${tag}`; all lists use `item.key` / `item.name` (no index keys)
+- ✅ **Component decomposition** — 12 focused components (Nav, Hero, SkuProSection, HomeExtras, PortfolioItem, PortfolioPage, AboutPage, ContactPage, HomePage, Footer) + sub-components (SkuProShot, SkuProFeatureRow, SectionRow, StandardSection, ImpactSection, TechGroupCard, AboutBio, CoreStrengths, TimelineRow, ContactLinkCard, ContactDetails, ContactForm, TestimonialCard, WorkedWith, Marquee)
+- ✅ **Helper functions** extracted: `readTrimmedInput`, `buildMailtoUrl` — each with `@param`/`@returns` JSDoc
+- ✅ **Zero console statements** in production code
+- ✅ **No visual/UX changes** — verified via screenshot diff + testid parity (creator-badge, hero-photo, skupro-shots × 3, 4 portfolio items, 4 timeline entries, 3 contact links)
+- ✅ **Lint clean**: 0 issues on new files; 0 runtime console errors
 
 ## Buttons / CTAs (all verified)
 | Button | Location | Destination |
