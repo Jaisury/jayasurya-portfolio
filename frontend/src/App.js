@@ -164,9 +164,13 @@ function App() {
           </div>
 
           <div className="hero-photo-wrap">
-            <div className="hero-photo-placeholder" data-testid="hero-photo">
-              <span>JA</span>
-            </div>
+            <img
+              src="/headshot.jpeg"
+              alt="Jayasurya Atla — Creator of SKU.Pro"
+              className="hero-photo"
+              data-testid="hero-photo"
+              loading="eager"
+            />
             <div className="hero-photo-ring"></div>
           </div>
         </div>
@@ -691,7 +695,7 @@ function App() {
                 At <strong>CRED</strong> (2022–2024), I owned catalog operations across 25,000+ SKUs spanning 8 categories — reducing listing errors by 30%, improving conversion by 12% through content enrichment, and saving 20+ hours per week via workflow automation.
               </p>
               <p>
-                I'm the creator of <strong>SKU.Pro</strong> — an AI-powered PIM &amp; catalog operations platform. It's the tool I wish existed while managing catalog at scale: taxonomy intelligence, feed health, AI content enrichment, all in one operating system.
+                I'm the creator and developer of <strong>SKU.Pro</strong> — my latest personal product. It's an AI-powered catalog assistant for e-commerce teams that generates marketplace-ready product content, SEO metadata, and structured catalog information — the tool I wish existed while managing catalog at scale.
               </p>
               <p>
                 I currently consult for <strong>Angad Creations</strong> and <strong>Glancia</strong> — managing end-to-end catalog operations independently across Shopify, Etsy, and Google Merchant Center for both brands. My particular focus is <strong>beauty &amp; personal care</strong> — where ingredient attributes, shade variants, compliance fields, and formulation types create catalog complexity that directly impacts discoverability and conversion.
@@ -739,10 +743,10 @@ function App() {
                 2025<br />Present
               </div>
               <div>
-                <div className="t-role">Creator · SKU.Pro</div>
+                <div className="t-role">Creator &amp; Developer — SKU.Pro</div>
                 <div className="t-company">Independent Product</div>
                 <div className="t-desc">
-                  Designing and building an AI-powered PIM &amp; catalog operations platform. Attribute taxonomy intelligence, feed health diagnostics, AI content enrichment, and revenue-at-risk analytics — all built around real catalog workflows.
+                  Designed and developed an AI-powered catalog assistant for e-commerce teams to generate marketplace-ready product content, SEO metadata, and structured catalog information.
                 </div>
               </div>
             </div>
