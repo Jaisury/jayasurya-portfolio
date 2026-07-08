@@ -188,38 +188,38 @@ function App() {
                   SKU.<span className="skupro-title-accent">Pro</span>
                 </h2>
                 <div className="skupro-tagline">
-                  AI-powered PIM &amp; catalog operations platform — built by a catalog specialist, for catalog teams.
+                  AI-powered catalog assistant — write marketplace-optimized titles, descriptions, bullets and keywords for Amazon, Shopify, Flipkart, Meesho and 6 more, in one click.
                 </div>
                 <p className="skupro-desc">
-                  Turn 25,000+ messy SKUs into clean, channel-ready product data. SKU.Pro combines attribute taxonomy intelligence, feed health monitoring, and AI content enrichment into one operating system for e-commerce catalog teams.
+                  Turn messy product data into clean, channel-ready SKUs. SKU.Pro combines AI content generation, marketplace-specific optimization, quality scoring, and generation history into one operating system for e-commerce catalog teams.
                 </p>
                 <div className="skupro-features">
                   <div className="skupro-feature">
                     <span className="skupro-feature-icon">◆</span>
                     <div>
-                      <div className="skupro-feature-title">AI Content Enrichment</div>
-                      <div className="skupro-feature-desc">Titles, descriptions, attributes — generated with catalog-aware AI trained on real PIM workflows.</div>
+                      <div className="skupro-feature-title">Marketplace-optimized output</div>
+                      <div className="skupro-feature-desc">Titles, descriptions, bullets &amp; keywords tuned for Amazon, Shopify, Flipkart, Meesho and 6 more channels.</div>
                     </div>
                   </div>
                   <div className="skupro-feature">
                     <span className="skupro-feature-icon">◆</span>
                     <div>
-                      <div className="skupro-feature-title">Feed Health Intelligence</div>
-                      <div className="skupro-feature-desc">Real-time diagnostics across Shopify, GMC &amp; Etsy with revenue-at-risk scoring.</div>
+                      <div className="skupro-feature-title">Quality score you can trust</div>
+                      <div className="skupro-feature-desc">Every generated SKU gets a health score so you know exactly what's ready to ship.</div>
                     </div>
                   </div>
                   <div className="skupro-feature">
                     <span className="skupro-feature-icon">◆</span>
                     <div>
-                      <div className="skupro-feature-title">Attribute Taxonomy Engine</div>
-                      <div className="skupro-feature-desc">Category-specific schemas for Beauty, Fashion, Health &amp; more — enforced automatically.</div>
+                      <div className="skupro-feature-title">Bulk upload &amp; templates</div>
+                      <div className="skupro-feature-desc">Process 10,000 SKUs before lunch. Reusable templates for repeat categories.</div>
                     </div>
                   </div>
                   <div className="skupro-feature">
                     <span className="skupro-feature-icon">◆</span>
                     <div>
-                      <div className="skupro-feature-title">Audit &amp; Governance</div>
-                      <div className="skupro-feature-desc">Quarterly-grade audits in minutes. SOPs, error tracking &amp; ownership baked in.</div>
+                      <div className="skupro-feature-title">Searchable history</div>
+                      <div className="skupro-feature-desc">Review, copy, export or re-run every SKU you've ever generated. Nothing lost.</div>
                     </div>
                   </div>
                 </div>
@@ -234,61 +234,67 @@ function App() {
                     Launch SKU.Pro →
                   </a>
                   <a
-                    data-testid="skupro-learn-btn"
+                    data-testid="skupro-demo-btn"
                     className="btn-ghost"
                     href={SKU_PRO_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    See it in action ↗
+                    View Live Demo ↗
                   </a>
                 </div>
               </div>
 
               <div className="skupro-preview" data-testid="skupro-preview">
-                <div className="skupro-preview-frame">
-                  <div className="skupro-preview-topbar">
-                    <span className="skupro-dot" style={{ background: "#e24b4a" }}></span>
-                    <span className="skupro-dot" style={{ background: "#ef9f27" }}></span>
-                    <span className="skupro-dot" style={{ background: "#1d9e75" }}></span>
-                    <span className="skupro-preview-url">sku.pro / dashboard</span>
-                  </div>
-                  <div className="skupro-preview-body">
-                    <div className="skupro-metric-row">
-                      <div className="skupro-metric">
-                        <div className="skupro-metric-label">Catalog Score</div>
-                        <div className="skupro-metric-value">
-                          94<span className="skupro-metric-unit">/100</span>
-                        </div>
-                        <div className="skupro-metric-delta up">↑ 12 pts this week</div>
-                      </div>
-                      <div className="skupro-metric">
-                        <div className="skupro-metric-label">Revenue at Risk</div>
-                        <div className="skupro-metric-value amber">
-                          ₹42<span className="skupro-metric-unit">K</span>
-                        </div>
-                        <div className="skupro-metric-delta down">↓ 68% MoM</div>
-                      </div>
-                    </div>
-                    <div className="skupro-chart-block">
-                      <div className="skupro-chart-title">Feed Health · 30 days</div>
-                      <div className="skupro-chart-bars">
-                        {[35, 55, 42, 68, 60, 78, 72, 85, 80, 92, 88, 96].map((h, i) => (
-                          <div
-                            key={i}
-                            className="skupro-bar"
-                            style={{ height: `${h}%` }}
-                          ></div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="skupro-ai-row">
-                      <div className="skupro-ai-badge">AI</div>
-                      <div className="skupro-ai-text">
-                        <strong>317 titles</strong> optimized for GMC · <span className="teal-text">+8% CTR projected</span>
-                      </div>
-                    </div>
-                  </div>
+                <div className="skupro-gallery">
+                  <a
+                    href={SKU_PRO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="skupro-shot skupro-shot-hero"
+                    data-testid="skupro-shot-landing"
+                    aria-label="View SKU.Pro landing page"
+                  >
+                    <img
+                      src="/skupro/landing.png"
+                      alt="SKU.Pro landing page — Ship 10,000 catalog SKUs before lunch"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="skupro-shot-label">Landing</span>
+                  </a>
+                  <a
+                    href={SKU_PRO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="skupro-shot"
+                    data-testid="skupro-shot-dashboard"
+                    aria-label="View SKU.Pro dashboard"
+                  >
+                    <img
+                      src="/skupro/dashboard.png"
+                      alt="SKU.Pro dashboard — catalog overview and metrics"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="skupro-shot-label">Dashboard</span>
+                  </a>
+                  <a
+                    href={SKU_PRO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="skupro-shot"
+                    data-testid="skupro-shot-history"
+                    aria-label="View SKU.Pro generation history"
+                  >
+                    <img
+                      src="/skupro/history.png"
+                      alt="SKU.Pro generation history — searchable, exportable SKU records"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="skupro-shot-label">History</span>
+                  </a>
                 </div>
                 <div className="skupro-live-tag">
                   <span className="skupro-live-dot"></span> Live product · Try it now
@@ -394,24 +400,24 @@ function App() {
                 }}
               >
                 <span className="flagship-tag">FLAGSHIP</span>
-                🚀 SKU.Pro · AI-Powered PIM Platform
+                🚀 SKU.Pro · Ship 10,000 SKUs before lunch
               </div>
               <div className="p-body">
                 <div className="p-meta">
                   <span className="p-number">00 · Featured</span>
                   <span className="p-type product">Live Product</span>
                 </div>
-                <div className="p-title">SKU.Pro — AI catalog operations, built by a catalog specialist</div>
+                <div className="p-title">SKU.Pro — Ship 10,000 catalog SKUs before lunch</div>
                 <div className="p-section">
                   <div className="p-section-label">Problem</div>
                   <div className="p-section-content">
-                    Catalog teams juggle 25K+ SKUs across Shopify, GMC, Etsy and Akeneo — but no tool actually thinks like a catalog operator. Existing PIMs are storage, not intelligence.
+                    E-commerce teams spend hours writing marketplace-optimized titles, descriptions and keywords for every SKU across Amazon, Shopify, Flipkart &amp; more — and there's no fast, reliable way to do it at scale.
                   </div>
                 </div>
                 <div className="p-section">
                   <div className="p-section-label">Solution</div>
                   <div className="p-section-content">
-                    An AI-powered platform combining attribute taxonomy intelligence, feed health diagnostics, revenue-at-risk scoring, and AI content enrichment — designed around real catalog workflows, not hypothetical ones.
+                    An AI catalog assistant powered by Claude Sonnet 4.5 that generates marketplace-ready content in one click. Titles, descriptions, bullets, keywords — with a quality score you can trust, bulk upload, templates and searchable history.
                   </div>
                 </div>
                 <div
@@ -425,13 +431,13 @@ function App() {
                     Impact
                   </div>
                   <div className="p-section-content" style={{ color: "var(--teal-light)" }}>
-                    Live · Multi-channel feed support · AI-native enrichment · Built for Beauty, Fashion &amp; D2C
+                    Live · 10 marketplaces supported · 100 free credits · No card required
                   </div>
                 </div>
                 <div className="p-tags">
                   <span className="p-tag">AI</span>
-                  <span className="p-tag">PIM</span>
-                  <span className="p-tag">Feed Health</span>
+                  <span className="p-tag">Catalog</span>
+                  <span className="p-tag">Marketplace</span>
                   <span className="p-tag">SaaS</span>
                 </div>
               </div>

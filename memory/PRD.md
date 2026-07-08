@@ -4,55 +4,68 @@
 Upgrade existing GitHub Pages portfolio (https://jaisury.github.io/jayasurya_portfolio_index.html/) into a **Premium Product Portfolio** positioning Jayasurya as an *E-commerce Catalog Operations Specialist who also builds AI-powered products*.
 
 **Hard constraints from user:**
-- DO NOT redesign from scratch
-- DO NOT change personal branding
-- DO NOT remove existing sections
-- Keep existing design language
+- DO NOT redesign from scratch · DO NOT change branding · DO NOT remove existing sections · Keep existing design language
 
 ## Architecture
-- **Stack**: React 19 SPA (single-page multi-view)
-- **Design**: Preserved original dark theme (`--black:#0a0a09`, `--teal:#1d9e75`, `--amber:#ef9f27`, etc.), noise texture, marquee, spinning photo ring
-- **Nav**: In-app page switching (Home / Portfolio / About / Contact) + external "View SKU.Pro" CTA
-- **No backend endpoints added** — purely static content
+- **Stack**: React 19 SPA (single-page multi-view, no backend added)
+- **Design**: Preserved original dark theme (`--black:#0a0a09`, `--teal:#1d9e75`, `--amber:#ef9f27`), noise texture, marquee, spinning photo ring
+- **Nav**: In-app view switching (Home / Portfolio / About / Contact) + external "View SKU.Pro" CTA
+- **Assets**: Real headshot in `/public/headshot.jpeg`; SKU.Pro screenshots in `/public/skupro/{landing,dashboard,history,login}.png`
 
-## User Personas
+## Personas
 1. **Hiring managers** at D2C / beauty brands looking for catalog leads
-2. **Founders / product teams** evaluating SKU.Pro as a potential PIM tool
+2. **Founders / product teams** evaluating SKU.Pro
 3. **LinkedIn network** — recruiters & peers verifying credibility
 
-## Core Requirements (Static)
-- Preserve every original section
-- Add "🚀 Creator of SKU.Pro" badge in hero (LIVE indicator)
-- Add tagline: *"I build AI-powered solutions for Catalog Operations, PIM, and E-commerce."*
-- Two hero CTAs: **View SKU.Pro** (→ https://ecommerce-ai-pro-2.emergent.host/) and **Contact Me**
-- New flagship SKU.Pro section on Home
-- SKU.Pro as `00 · Featured` in Portfolio grid
-- About/Timeline updated to reflect AI product-building
+## Implemented Iterations
 
-## Implemented (Jan 2026)
-- ✅ Hero improved (typography, spacing, Creator badge with LIVE pulse, AI-powered tagline block)
-- ✅ CTAs updated (View SKU.Pro external link + Contact Me → Contact page)
-- ✅ New SKU.Pro flagship section with feature list + animated dashboard preview (metrics, chart bars, AI badge)
-- ✅ Portfolio flagship card (00 · SKU.Pro) added above CRED case study
-- ✅ About page bio + timeline updated with "Creator · SKU.Pro" entry
-- ✅ Contact page updated: "Open to opportunities & SKU.Pro pilots", added SKU.Pro Design Partner role
-- ✅ Nav bar CTA: "View SKU.Pro ↗"
-- ✅ Marquee updated to include SKU.Pro & AI Content Enrichment
-- ✅ Tech stack: added "AI & Product" group (SKU.Pro, LLM-driven Enrichment, Prompt Design, AI QA)
-- ✅ Footer updated: "Creator of SKU.Pro ↗"
-- ✅ Data-testids on all interactive elements
-- ✅ Preserved all original sections, colors, marquee animation, testimonials, worked-with, tech stack
+### Iter 1 (Jan 2026) — Premium Portfolio Upgrade
+- Hero improved with "🚀 Creator of SKU.Pro" LIVE badge + AI-powered tagline block
+- Two hero CTAs: **View SKU.Pro** (external) + **Contact Me**
+- New flagship SKU.Pro section on Home + SKU.Pro added as `00 · Featured` in Portfolio
+- About / Timeline updated with SKU.Pro entry
+- Nav CTA, marquee & Tech Stack updated with SKU.Pro / AI tags
+- data-testid on all interactive elements
 
-## What's NOT Implemented
-- Contact form uses `mailto:` (no backend). Submissions open user's email client with pre-filled body — no server storage
-- Hero photo uses a placeholder ("JA" avatar). User did not supply a photo; the original portfolio's base64 photo was not preserved to keep the JS bundle lean
+### Iter 2 — Headshot & Content Alignment
+- Replaced "JA" placeholder with real professional headshot (200x200 circular w/ teal ring)
+- Timeline: *"Creator & Developer — SKU.Pro / Independent Product"* + user-provided description
+- About bio: repositioned SKU.Pro as *"latest personal product… AI-powered catalog assistant"*
 
-## Backlog / Next Actions
-- **P1**: Replace hero placeholder with user's real headshot (user needs to provide)
-- **P1**: Backend contact form (FastAPI endpoint + MongoDB storage) if user prefers not to rely on mailto
-- **P2**: Add real SKU.Pro screenshots (currently uses a UI mock of dashboard)
-- **P2**: Add scroll-based analytics / view counts for SKU.Pro CTA
-- **P2**: Blog / case-study individual pages for deeper reads
+### Iter 3 — Production Polish (current)
+- ✅ **Removed all Emergent branding** — deleted `#emergent-badge`, posthog snippet, and Emergent script from `index.html`
+- ✅ **Real SKU.Pro screenshots** — replaced mocked dashboard preview with a 3-shot gallery (Landing, Dashboard, History) using actual images; each with hover lift + zoom + label chip
+- ✅ **Copy aligned to real product** — SKU.Pro section now reads *"Write marketplace-optimized titles for Amazon, Shopify, Flipkart, Meesho + 6 more"*; features updated to Marketplace-optimized output / Quality score / Bulk upload / Searchable history
+- ✅ **Buttons verified** — Launch SKU.Pro, View Live Demo, Contact Me, nav CTA all functional and pointing to https://ecommerce-ai-pro-2.emergent.host/
+- ✅ **SEO / OG / Twitter / Schema.org** — full meta suite added: title, description, keywords, OG tags, Twitter cards, Schema.org `Person` + `SoftwareApplication` JSON-LD
+- ✅ **Performance** — All images have `loading="lazy"` and `decoding="async"`; hero image uses `loading="eager"`
+- ✅ **Responsiveness** — Verified 1920×800 (desktop), 768×900 (tablet), 390×844 (mobile). Added mobile-specific breakpoints (`≤480px`)
+- ✅ **QA** — No console errors, no overflow, all CTAs functional, no dark-on-dark issues
+
+## Buttons / CTAs (all verified)
+| Button | Location | Destination |
+|---|---|---|
+| View SKU.Pro ↗ | Nav (top right) | https://ecommerce-ai-pro-2.emergent.host/ |
+| View SKU.Pro → | Hero | https://ecommerce-ai-pro-2.emergent.host/ |
+| Contact Me | Hero | Contact page (internal) |
+| Launch SKU.Pro → | SKU.Pro section | https://ecommerce-ai-pro-2.emergent.host/ |
+| View Live Demo ↗ | SKU.Pro section | https://ecommerce-ai-pro-2.emergent.host/ |
+| Read article ↗ | Portfolio #01 (CRED) | LinkedIn article |
+| Try live tool ↗ | Portfolio #02 (Audit) | white-anni-53.tiiny.site |
+| View dashboard ↗ | Portfolio #03 (Dashboard) | maroon-sadie-90.tiiny.site |
+| Email / LinkedIn / Phone | Contact page | mailto / linkedin / tel |
+| Send message → | Contact form | Opens mailto with pre-filled body |
+
+## SEO
+- `<title>`: *Jayasurya Atla — Catalog Ops Specialist & Creator of SKU.Pro*
+- `<meta description>`: full, keyword-rich
+- OG image + Twitter summary_large_image using headshot
+- Schema.org `Person` (Jayasurya) + `SoftwareApplication` (SKU.Pro) JSON-LD blocks
 
 ## Test Credentials
-None — no auth introduced.
+None — no auth in system.
+
+## Backlog
+- **P2**: Add remaining SKU.Pro screenshots when available (Generate SKU, Generated Output, Analytics) — gallery is designed to accept more shots without layout changes
+- **P2**: Replace testimonial avatar chips with real client photos when available
+- **P3**: Add UTM tags to all SKU.Pro links for traffic attribution
