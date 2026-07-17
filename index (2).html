@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D2C Catalog Operations & Data Pipeline Architect. Architected scalable catalog systems for 700+ brands, 25K+ SKUs. Expert in Shopify, multi-channel commerce, data pipeline design, and AI marketplace content generation.">
+    <meta name="og:title" content="Jayasurya Atla — D2C Catalog Operations Architect">
+    <meta name="og:description" content="Architecting scalable catalog systems that scale from hundreds to millions of SKUs. 700+ merchant onboardings, 25K+ SKU governance, 1–3 day SLA delivery.">
+    <meta name="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jayasurya Atla — D2C Catalog Operations Architect">
+    <meta name="twitter:description" content="D2C Catalog Operations & Data Pipeline Architect">
+    
+    <title>Jayasurya Atla — D2C Catalog Operations Architect | Data Pipeline Design</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #667eea;
+            --primary-dark: #764ba2;
+            --secondary: #28a745;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --bg: #ffffff;
+            --bg-light: #f8f9fa;
+            --border: #e9ecef;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .cta-btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .cta-btn.primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .cta-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-btn.secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Section */
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+        
+        /* Companies/Skills */
+        .companies {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        
+        .companies h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+        
+        .company-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tag {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.25rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        
+        .tag.tool {
+            background: var(--primary);
+            color: white;
+            border: none;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .portfolio-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .portfolio-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-card .number {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .portfolio-card .role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-card .problem {
+            background: white;
+            padding: 1rem;
+            border-left: 3px solid #ff9800;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-card .solution {
+            background: white;
+            padding: 1rem;
+            border-left: 3px solid var(--primary);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-card .impact {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-left: 3px solid var(--secondary);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-card .impact li {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .portfolio-card ul {
+            margin-left: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .portfolio-tags .tag {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tech-category h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .tech-category ul {
+            list-style: none;
+        }
+        
+        .tech-category li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tech-category li:before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-content strong {
+            color: var(--text);
+        }
+        
+        .core-strengths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .strength-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .strength-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .strength-item ul {
+            list-style: none;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        
+        .strength-item li:before {
+            content: "✓ ";
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item {
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+        
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: -1.05rem;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: var(--border);
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-item ul {
+            margin-left: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .timeline-item li:before {
+            content: "✓ ";
+            color: var(--secondary);
+            font-weight: 700;
+            margin-right: 0.25rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .contact-item a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group button {
+            background: white;
+            color: var(--primary);
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .form-group button:hover {
+            background: var(--bg-light);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-light);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">JA.</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>D2C Catalog Operations & Data Pipeline Architect</h1>
+            <p class="subtitle">Architecting scalable catalog systems that scale from hundreds to millions of SKUs.</p>
+            
+            <div class="hero-cta">
+                <button class="cta-btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Talk</button>
+                <button class="cta-btn secondary" onclick="window.open('https://linkedin.com/in/jayasuryaatla-8b573912a', '_blank')">View LinkedIn</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">700+</span>
+                    <span class="stat-label">Merchant Onboardings</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25K+</span>
+                    <span class="stat-label">SKUs Governed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1–3 Days</span>
+                    <span class="stat-label">Go-Live SLA</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Retail Categories</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies & Skills -->
+    <section>
+        <div class="container">
+            <div class="companies">
+                <h3>Worked with</h3>
+                <div class="company-tags">
+                    <span class="tag">CRED</span>
+                    <span class="tag">Angad Creations</span>
+                    <span class="tag">Angad Worldwide</span>
+                    <span class="tag">The Souled Store</span>
+                    <span class="tag">Ather</span>
+                </div>
+                
+                <h3 style="margin-top: 2rem;">Tools & Platforms</h3>
+                <div class="company-tags">
+                    <span class="tag tool">Shopify</span>
+                    <span class="tag tool">Google Merchant Center</span>
+                    <span class="tag tool">Akeneo PIM</span>
+                    <span class="tag tool">Notion</span>
+                    <span class="tag tool">Claude AI</span>
+                    <span class="tag tool">Etsy</span>
+                    <span class="tag tool">Amazon</span>
+                    <span class="tag tool">Flipkart</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section>
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 3rem;">Work that proves the thinking. Five projects solving real catalog problems.</p>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1: CRED -->
+                <div class="portfolio-card">
+                    <div class="number">01</div>
+                    <h3>CRED Multi-Category Catalog System</h3>
+                    <p class="role">Enterprise Scale, Multi-Category Governance</p>
+                    
+                    <div class="problem">
+                        <strong>Problem:</strong> Scaling from 100 to 700+ brands required systems thinking, not just hiring more people. Different categories needed distinct attribute frameworks.
+                    </div>
+                    
+                    <div class="solution">
+                        <strong>Solution:</strong>
+                        <ul>
+                            <li>Category-specific attribute templates (8 categories)</li>
+                            <li>CSV validation with pre-configured error checks</li>
+                            <li>Bulk upload workflow</li>
+                            <li>Standardized SOPs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact">
+                        <strong>Impact:</strong>
+                        <ul>
+                            <li>✓ 700+ merchant onboardings</li>
+                            <li>✓ 25,000+ SKUs governed</li>
+                            <li>✓ 1–3 day SLA</li>
+                            <li>✓ 30% error reduction</li>
+                            <li>✓ 20+ hours/week saved</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="portfolio-tags">
+                        <span class="tag">Enterprise PIM</span>
+                        <span class="tag">Taxonomy</span>
+                        <span class="tag">Data Pipeline</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Angad D2C -->
+                <div class="portfolio-card">
+                    <div class="number">02</div>
+                    <h3>D2C Multi-Channel Catalog System</h3>
+                    <p class="role">D2C Speed, Multi-Channel Complexity</p>
+                    
+                    <div class="problem">
+                        <strong>Problem:</strong> Channel-agnostic product data doesn't exist. Amazon wants keyword-dense titles. Shopify wants SEO titles. Etsy wants tags. Same product, three different data models.
+                    </div>
+                    
+                    <div class="solution">
+                        <strong>Solution:</strong>
+                        <ul>
+                            <li>Structured product data once</li>
+                            <li>Channel-specific transformation rules</li>
+                            <li>GMC optimization (zero violations)</li>
+                            <li>Cross-border inventory management</li>
+                            <li>Claude AI for content generation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact">
+                        <strong>Impact:</strong>
+                        <ul>
+                            <li>✓ Multi-channel launches in 1–3 days</li>
+                            <li>✓ Zero GMC policy violations</li>
+                            <li>✓ 80% reduction in manual mapping</li>
+                            <li>✓ Faster seasonal campaigns</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="portfolio-tags">
+                        <span class="tag">D2C</span>
+                        <span class="tag">Shopify</span>
+                        <span class="tag">Multi-Channel</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: SKU.Pro -->
+                <div class="portfolio-card">
+                    <div class="number">03</div>
+                    <h3>SKU.Pro - AI Marketplace Content Generator</h3>
+                    <p class="role">Automation, AI-Powered Content Generation</p>
+                    
+                    <div class="problem">
+                        <strong>Problem:</strong> Manual marketplace content creation is the last bottleneck in catalog scaling. Different platforms need different content formats.
+                    </div>
+                    
+                    <div class="solution">
+                        <strong>Solution:</strong>
+                        <ul>
+                            <li>Structured product data input</li>
+                            <li>Claude AI channel-specific transformations</li>
+                            <li>Auto-generates for 9 channels</li>
+                            <li>Bulk generation + history tracking</li>
+                            <li>Catalog quality scoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact">
+                        <strong>Impact:</strong>
+                        <ul>
+                            <li>✓ 2 weeks → 5 minutes per category</li>
+                            <li>✓ 100+ listings per generation</li>
+                            <li>✓ Channel-specific content</li>
+                            <li>✓ Removes content bottleneck</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="portfolio-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Claude</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Audit Tool -->
+                <div class="portfolio-card">
+                    <div class="number">04</div>
+                    <h3>Catalog Health Audit Tool</h3>
+                    <p class="role">Interactive Tool, Free Resource</p>
+                    
+                    <div class="problem">
+                        <strong>Problem:</strong> Most D2C brands don't know their catalog is broken until it shows up in returns or ad spend.
+                    </div>
+                    
+                    <div class="solution">
+                        <strong>Solution:</strong>
+                        <ul>
+                            <li>20 diagnostic questions</li>
+                            <li>4 audit areas</li>
+                            <li>Real-time health score</li>
+                            <li>Prioritized fix list</li>
+                            <li>No signup required</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact">
+                        <strong>Impact:</strong>
+                        <ul>
+                            <li>✓ 4-minute audit</li>
+                            <li>✓ 100+ brands using</li>
+                            <li>✓ Instant diagnostic clarity</li>
+                            <li>✓ Free access</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="portfolio-tags">
+                        <span class="tag">Tool</span>
+                        <span class="tag">Audit</span>
+                        <span class="tag">Free</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Dashboard -->
+                <div class="portfolio-card">
+                    <div class="number">05</div>
+                    <h3>Catalog Governance Dashboard v1.0</h3>
+                    <p class="role">Dashboard, Real-Time Analytics</p>
+                    
+                    <div class="problem">
+                        <strong>Problem:</strong> No real-time visibility into data quality, feed health, revenue risk, or which fixes actually matter.
+                    </div>
+                    
+                    <div class="solution">
+                        <strong>Solution:</strong>
+                        <ul>
+                            <li>5-tab enterprise dashboard</li>
+                            <li>Catalog quality score</li>
+                            <li>Feed health tracking</li>
+                            <li>Revenue-at-risk metrics</li>
+                            <li>AI recommendations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="impact">
+                        <strong>Impact:</strong>
+                        <ul>
+                            <li>✓ Real-time visibility</li>
+                            <li>✓ 8 categories tracked</li>
+                            <li>✓ Revenue risk quantified</li>
+                            <li>✓ Priority management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="portfolio-tags">
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">PIM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2>Tech Stack & Expertise</h2>
+            
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h3>Core Architecture & Systems</h3>
+                    <ul>
+                        <li>Catalog Architecture & Governance</li>
+                        <li>Data Pipeline Design</li>
+                        <li>Process Architecture & Automation</li>
+                        <li>Multi-Category Taxonomy Design</li>
+                        <li>Merchant Data Intake Workflows</li>
+                        <li>Pre-validation & Error Prevention</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Multi-Channel Commerce</h3>
+                    <ul>
+                        <li>Shopify Admin & Catalog Mgmt</li>
+                        <li>Google Merchant Center</li>
+                        <li>Amazon, Flipkart, Etsy</li>
+                        <li>Myntra, AJIO, Nykaa</li>
+                        <li>Feed Optimization</li>
+                        <li>Marketplace Compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Modern D2C Stack</h3>
+                    <ul>
+                        <li>Shopify POS & Backend</li>
+                        <li>Notion (Data Management)</li>
+                        <li>Claude AI (Content Generation)</li>
+                        <li>Google Merchant Center</li>
+                        <li>Photoshop (Image Optimization)</li>
+                        <li>Handbrake (Video Management)</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Category Expertise</h3>
+                    <ul>
+                        <li>Beauty & Personal Care</li>
+                        <li>Fashion & Apparel</li>
+                        <li>Food & Beverages</li>
+                        <li>Electronics & Gadgets</li>
+                        <li>Health & Wellness</li>
+                        <li>General Retail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            
+            <div class="about-content">
+                <p>I'm a <strong>D2C Catalog Operations Architect</strong> with 4+ years of experience designing scalable product data systems that operate at both enterprise scale and D2C speed.</p>
+                
+                <p><strong>Enterprise Scale (CRED):</strong> I designed catalog operations across 25,000+ SKUs spanning 8 categories — onboarding 700+ partner brands with 1–3 day SLA delivery. I architected category-specific attribute frameworks, built pre-validation systems, and created standardized workflows that scaled without proportionally scaling the team.</p>
+                
+                <p><strong>D2C Operations (Now):</strong> I'm architecting multi-channel catalog operations for Angad Creations and Angad Worldwide — managing Shopify storefronts, Google Merchant Center, and marketplace channels across 9+ platforms for global D2C brands.</p>
+                
+                <p><strong>Core Insight:</strong> Enterprise catalog = scale + consistency. D2C catalog = speed + channel adaptation. They require different system designs. That's what I architect.</p>
+                
+                <p>I'm particularly experienced in <strong>beauty & personal care</strong> — where ingredient attributes, shade variants, compliance requirements, and formulation data create complex catalog challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2>Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2025 – Present</div>
+                    <div class="timeline-title">Freelance D2C Catalog Operations Architect</div>
+                    <div class="timeline-company">Angad Creations & Angad Worldwide</div>
+                    <ul>
+                        <li>Shopify storefront administration & catalog management</li>
+                        <li>Google Merchant Center optimization (zero policy violations)</li>
+                        <li>Marketplace coordination (Etsy, Amazon, Flipkart)</li>
+                        <li>Cross-border commerce (India & Canada)</li>
+                        <li>AI-assisted content generation (Claude)</li>
+                        <li>Pre-launch catalog audits & feed validation</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2022 – Jun 2024</div>
+                    <div class="timeline-title">Catalog & QA Specialist</div>
+                    <div class="timeline-company">CRED</div>
+                    <ul>
+                        <li>Architected attribute frameworks across 8 retail categories</li>
+                        <li>Enabled 700+ merchant onboardings with 1–3 day SLA</li>
+                        <li>Governed 25,000+ SKUs with taxonomy alignment & quality checks</li>
+                        <li>Reduced listing errors by 30%, improved conversion by 12%</li>
+                        <li>Coordinated OMS platforms (Unicommerce, Increff, EasyEcom, Vinculum)</li>
+                        <li>Mentored 5+ team members on catalog governance</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2024 – Mar 2025</div>
+                    <div class="timeline-title">Senior Sales Associate</div>
+                    <div class="timeline-company">The Souled Store</div>
+                    <ul>
+                        <li>Owned daily sales reports & KPI tracking</li>
+                        <li>Delivered personalized recommendations → 15% sales lift</li>
+                        <li>Resolved 95%+ of customer escalations</li>
+                        <li>Enhanced loyalty program adoption → 10% repeat purchase increase</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2021 – Jun 2022</div>
+                    <div class="timeline-title">Product Specialist</div>
+                    <div class="timeline-company">Ather Space Visakhapatnam</div>
+                    <ul>
+                        <li>Market research & competitor analysis</li>
+                        <li>Product roadmap support with customer insights</li>
+                        <li>Feature launches → 15% sales uplift</li>
+                        <li>Quality standards through internal audits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <h2>What People Say</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Working with Jayasurya on our Shopify catalog was straightforward — he understood the attribute structure quickly, kept the feed clean across GMC and Etsy without needing direction, and delivered solid SOPs our team actually uses."</p>
+                    <div class="testimonial-author">Angad Creations</div>
+                    <div class="testimonial-role">Freelance Client · Dec 2025–Present</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Jayasurya demonstrates strong catalog thinking and genuine operational depth. The work is thorough, well-documented, and immediately usable — no fluff, just results. You can feel the experience managing SKUs at scale."</p>
+                    <div class="testimonial-author">Daniel</div>
+                    <div class="testimonial-role">LinkedIn Connection · E-commerce & Ops</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <h2>Let's Work Together</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">Open to opportunities. Looking for senior catalog operations and PIM roles at D2C brands, marketplace platforms, and Shopify Plus partners.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-label">📧 Email</div>
+                        <a href="mailto:jayasurya210897@gmail.com">jayasurya210897@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">🔗 LinkedIn</div>
+                        <a href="https://linkedin.com/in/jayasuryaatla-8b573912a" target="_blank">linkedin.com/in/jayasuryaatla</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">📱 Phone</div>
+                        <a href="tel:+919640755587">+91 9640755587</a>
+                        <div style="font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem;">10am–7pm IST, Hyderabad</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <p style="font-size: 0.95rem; opacity: 0.9;">
+                        <strong>Target roles:</strong> Senior Catalog Operations Manager, PIM Specialist, D2C Operations Lead, Commerce Data Architect<br>
+                        <strong>Compensation:</strong> ₹60–80L range · <strong>Location:</strong> Hyderabad (open to Bengaluru) · <strong>Availability:</strong> Immediate
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Jayasurya Atla. All rights reserved.</p>
+            <p>D2C Catalog Operations Architect | Last updated: July 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
